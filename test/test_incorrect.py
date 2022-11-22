@@ -1,7 +1,7 @@
 from src.checkSudoku import checkSudoku
 import pytest
 
-
+@pytest.mark.incorrect
 def test_incorrect():
 
     incorrect = [[1,2,3,4],

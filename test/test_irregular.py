@@ -1,6 +1,7 @@
 from src.checkSudoku import checkSudoku
 import pytest
 
+@pytest.mark.irregular
 def test_irregular():
     
     irregular = [[1,2,3],
