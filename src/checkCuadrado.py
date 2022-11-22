@@ -17,22 +17,3 @@ def checkCuadrado(sudoku):
 	assert isinstance(sudokuSano, bool), "la interfaz exige devolver un valor lógico"
 
 	return sudokuSano
-
-
-### CASOS TEST ###
-
-if __name__ == '__main__':
-	
-	import casosTestSudoku
-
-	for attr in sorted(casosTestSudoku.__dict__):
-	# Scan namespace keys (or enumerate) del objeto modulo checkCuadrado
-	# Asi podemos añadir todos los casos que queramos en la unidad cassTestSudoku
-	# sin modificar este codigo
-		if attr.startswith('__'):
-			pass
-			# Skip atributo
-		else:
-			print(attr, " => ", checkCuadrado(casosTestSudoku.__dict__[attr]))
-			# mismo codigo que getattr(module, attr)
-			# es necesario añadir el espacio de nombres del modulo: casosTestSudoku.irregular	
